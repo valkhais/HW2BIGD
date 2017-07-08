@@ -72,9 +72,12 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
 
         Double Q_diff = 0.0;
 
+        System.out.println("current window size is " + user_w.size());
         // if user's sliding window is full, retrieve recommendations and update q-diff value
         if (user_w.size() >= WINDOW_SIZE) {
             List<String> ranked_recommendations = aggregate(getLiftDataForUserWindow(user_w));
+            System.out.println("ranked recommendations are " + ranked_recommendations);
+            System.out.println("current movie is " + movie_id);
             if (ranked_recommendations.contains(movie_id)) {
                 // indexes start from 0, ranks from 1
                 int rank = 1 + ranked_recommendations.indexOf(movie_id);
@@ -93,6 +96,7 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
                 user_id,
                 USERS_TABLE_CF_WINDOW,
                 aggregation_window_col_name);
+        System.out.println("Calculated Q_diff is " + Q_diff);
         // emit calculated Q for current tuple to QBolt
         collector.emit(new Values(Q_diff));
         collector.ack(tuple);

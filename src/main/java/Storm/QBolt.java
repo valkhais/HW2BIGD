@@ -23,11 +23,13 @@ public class QBolt extends BaseRichBolt {
     }
 
     public void execute(Tuple tuple) {
+        System.out.println("Previous delta_Q is " + delta_Q);
         delta_Q += tuple.getDoubleByField(CommonConstants.Q);
+        System.out.println("New delta_Q is " + delta_Q);
 
         if(num_of_recommendations++ == 1000){
             num_of_recommendations = 0;
-
+            System.out.println("Emitted delta_Q is " + delta_Q);
             collector.emit(new Values(delta_Q));
             delta_Q = 0.0;
         }
