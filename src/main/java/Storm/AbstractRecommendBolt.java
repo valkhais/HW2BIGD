@@ -9,6 +9,7 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 import com.google.gson.Gson;
+import com.google.gson.internal.LinkedTreeMap;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.Put;
@@ -110,8 +111,14 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
         List<JSONObject> lift_data = new ArrayList<>();
 
         for (Integer i = 0; i < WINDOW_SIZE; ++i) {
-            //TODO: check if .get works on int input key
-            JSONObject rated_movie = (JSONObject) user_w.get(i.toString());
+            // get user window as JSONObject
+            LinkedTreeMap rated_movie_map = (LinkedTreeMap) user_w.get(i.toString());
+            JSONObject rated_movie = new JSONObject();
+            for (Object o : rated_movie_map.entrySet())
+            {
+                Map.Entry e = (Map.Entry) o;
+                rated_movie.put(e.getKey(),e.getValue());
+            }
             // retrieve the corresponding lift data from lift table, for the current rated movie (from window)
             JSONObject lift_array = readFromTableAsJson(
                     lift_table,
