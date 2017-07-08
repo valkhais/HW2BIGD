@@ -12,8 +12,8 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.storm.json.simple.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -75,8 +75,8 @@ public class Hw2HTablesCreator {
     private static void createLiftTable() throws IOException {
 
         // read pos/neg lift csv files
-        BufferedReader in_pos = new BufferedReader(new FileReader(POS_LIFT_PATH));
-        BufferedReader in_neg = new BufferedReader(new FileReader(NEG_LIFT_PATH));
+        BufferedReader in_pos = new BufferedReader(new InputStreamReader(Hw2HTablesCreator.class.getResourceAsStream(POS_LIFT_PATH)));
+        BufferedReader in_neg = new BufferedReader(new InputStreamReader(Hw2HTablesCreator.class.getResourceAsStream(NEG_LIFT_PATH)));
         Iterable<CSVRecord> pos_records = CSVFormat.DEFAULT.parse(in_pos);
         Iterable<CSVRecord> neg_records = CSVFormat.DEFAULT.parse(in_neg);
 

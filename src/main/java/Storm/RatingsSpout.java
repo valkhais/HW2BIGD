@@ -1,6 +1,5 @@
 package Storm;
 
-import Utils.CommonConstants;
 import backtype.storm.spout.SpoutOutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -9,10 +8,11 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Values;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Map;
+
+import static Utils.CommonConstants.*;
 
 
 public class RatingsSpout extends BaseRichSpout {
@@ -24,11 +24,7 @@ public class RatingsSpout extends BaseRichSpout {
 
     public void open(Map map, TopologyContext topologyContext, SpoutOutputCollector spoutOutputCollector) {
         collector = spoutOutputCollector;
-        try {
-            ratings_file = new BufferedReader(new FileReader(CommonConstants.RATINGS_PATH));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        ratings_file = new BufferedReader(new InputStreamReader(RatingsSpout.class.getResourceAsStream(RATINGS_PATH)));
     }
 
     public void nextTuple() {
@@ -50,7 +46,7 @@ public class RatingsSpout extends BaseRichSpout {
     }
 
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
-        outputFieldsDeclarer.declare(new Fields(CommonConstants.USER_ID, CommonConstants.MOVIE_ID, CommonConstants.RATING));
+        outputFieldsDeclarer.declare(new Fields(USER_ID, MOVIE_ID, RATING));
 
     }
 }
