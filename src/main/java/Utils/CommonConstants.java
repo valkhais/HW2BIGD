@@ -4,9 +4,9 @@ public final class CommonConstants {
 
     public static final String POS = "pos";
     public static final String NEG = "neg";
-    public static final String POS_LIFT_PATH = "/poslift.csv";
-    public static final String NEG_LIFT_PATH = "/neglift.csv";
-    public static final String RATINGS_PATH = "/ratings.dat";
+    public static final String POS_LIFT_PATH = "/src/main/resources/poslift.csv";
+    public static final String NEG_LIFT_PATH = "/src/main/resources/neglift.csv";
+    public static final String RATINGS_PATH = "/src/main/resources/ratings.dat";
 
     public static final String LIFT_TABLE_NAME = "lift_table";
     public static final String LIFT_TABLE_CF_LIFT = "lift";
