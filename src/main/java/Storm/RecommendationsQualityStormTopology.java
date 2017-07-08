@@ -77,8 +77,8 @@ public class RecommendationsQualityStormTopology {
         System.out.println("submitting topology");
         cluster.submitTopology(recommendations_quality_topology, conf, builder.createTopology());
         // we will wait 10 minutes for the cluster to compute the submitted topology, before shutting it down
-        System.out.println("WAITING for the topology to execute");
-        Utils.sleep(1000*60*10);
+        System.out.println("WAITING 1 min for the topology to execute");
+        Utils.sleep(1000*60);
         System.out.println("Shutting down cluster");
         cluster.shutdown();
         Hw2HTablesCreator.cleanup();
