@@ -7,7 +7,7 @@ public class Main {
 
     public static void main (String[] args) throws IOException
     {
-        Hw2HTablesCreator.createTables();
+        Hw2HTablesCreator.getInstance().createTables();
         try {
             RecommendationsQualityStormTopology.buildTopology();
         } catch (Exception e) {

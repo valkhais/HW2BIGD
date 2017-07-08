@@ -81,6 +81,6 @@ public class RecommendationsQualityStormTopology {
         Utils.sleep(1000*60);
         System.out.println("Shutting down cluster");
         cluster.shutdown();
-        Hw2HTablesCreator.cleanup();
+        Hw2HTablesCreator.getInstance().cleanup();
     }
 }

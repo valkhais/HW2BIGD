@@ -23,24 +23,34 @@ import static Utils.CommonConstants.*;
 
 
 public class Hw2HTablesCreator {
+    private static Hw2HTablesCreator instance = new Hw2HTablesCreator();
 
-    private static Admin admin;
-    private static Connection conn;
+    private Admin admin;
+    private Connection conn;
 
-    private static TableName lift_table_name = TableName.valueOf(LIFT_TABLE_NAME);
-    private static TableName users_table_name = TableName.valueOf(USERS_TABLE_NAME);
+    private TableName lift_table_name = TableName.valueOf(LIFT_TABLE_NAME);
+    private TableName users_table_name = TableName.valueOf(USERS_TABLE_NAME);
 
 
-    public static void createTables() throws IOException {
-
+    private Hw2HTablesCreator() {
         System.out.println("configure connection");
         // Instantiating configuration object
         Configuration conf = HBaseConfiguration.create();
-        // Instantiating Connection object
-        conn = ConnectionFactory.createConnection(conf);
         // Instantiating Admin object
-        admin = conn.getAdmin();
+        try {
+            // Instantiating Connection object
+            conn = ConnectionFactory.createConnection(conf);
+            admin = conn.getAdmin();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public static Hw2HTablesCreator getInstance() {
+        return instance;
+    }
+
+    public void createTables() throws IOException {
         System.out.println("check if tables exist");
         // delete lift and users tables if already exist
         if (admin.tableExists(lift_table_name))
@@ -62,17 +72,17 @@ public class Hw2HTablesCreator {
         createUsersTable();
     }
 
-    public static Table getTable(TableName table_name) throws IOException {
+    public Table getTable(TableName table_name) throws IOException {
         return conn.getTable(lift_table_name);
     }
 
-    public static void cleanup() throws IOException {
+    public void cleanup() throws IOException {
         System.out.println("tables creator cleanup");
         admin.close();
         conn.close();
     }
 
-    private static void createLiftTable() throws IOException {
+    private void createLiftTable() throws IOException {
 
         // read pos/neg lift csv files
         BufferedReader in_pos = new BufferedReader(new InputStreamReader(Hw2HTablesCreator.class.getResourceAsStream(POS_LIFT_PATH)));
@@ -113,7 +123,7 @@ public class Hw2HTablesCreator {
         table.close();
     }
 
-    private static void updateLiftMapFromCSV(HashMap<JSONObject,JSONObject> liftMap, Iterable<CSVRecord> records, String posOrNeg)
+    private void updateLiftMapFromCSV(HashMap<JSONObject,JSONObject> liftMap, Iterable<CSVRecord> records, String posOrNeg)
     {
         for (CSVRecord record : records) {
             String x = record.get(0);
@@ -137,7 +147,7 @@ public class Hw2HTablesCreator {
         }
     }
 
-    private static void createUsersTable() throws IOException {
+    private void createUsersTable() throws IOException {
         System.out.println("creating users table");
         // create the users table resource with column family - window
         HTableDescriptor tableDescriptor = new HTableDescriptor(users_table_name);

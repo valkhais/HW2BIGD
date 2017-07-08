@@ -8,7 +8,7 @@ public class stormTest {
     public void test() {
         try {
             System.out.println("calling create tables");
-            Hw2HTablesCreator.createTables();
+            Hw2HTablesCreator.getInstance().createTables();
             System.out.println("calling build topology");
             RecommendationsQualityStormTopology.buildTopology();
         } catch (Exception e) {

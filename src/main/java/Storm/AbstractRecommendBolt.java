@@ -1,5 +1,6 @@
 package Storm;
 
+import HBase.Hw2HTablesCreator;
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static HBase.Hw2HTablesCreator.getTable;
 import static Utils.CommonConstants.*;
 
 public abstract class AbstractRecommendBolt extends BaseRichBolt {
@@ -44,8 +44,8 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
         this.collector = collector;
 
         try {
-            lift_table = getTable(lift_table_name);
-            users_table = getTable(users_table_name);
+            lift_table = Hw2HTablesCreator.getInstance().getTable(lift_table_name);
+            users_table = Hw2HTablesCreator.getInstance().getTable(users_table_name);
         } catch (IOException e) {
             e.printStackTrace();
         }
