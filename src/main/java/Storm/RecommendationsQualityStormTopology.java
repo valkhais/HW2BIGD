@@ -23,8 +23,8 @@ public class RecommendationsQualityStormTopology {
     private static final String rating_spout = "rating_spout";
     private static final String sum_lift_recommend_bolt = "max_sum_lift_recommend_bolt";
     private static final String avg_lift_recommend_bolt = "max_avg_lift_recommend_bolt";
-    private static final String sum_lift_Q_recommend_bolt = "max_sum_lift_recommend_bolt";
-    private static final String avg_lift_Q_recommend_bolt = "max_avg_lift_recommend_bolt";
+    private static final String sum_lift_Q_recommend_bolt = "max_sum_lift_Q_recommend_bolt";
+    private static final String avg_lift_Q_recommend_bolt = "max_avg_lift_Q_recommend_bolt";
     private static final String sum_lift_Hdfs_bolt = "Max_sum_lift_HDFS_Bolt";
     private static final String avg_lift_Hdfs_bolt = "Max_avg_lift_HDFS_Bolt";
     private static final String recommendations_quality_topology = "recommendations_qulity";
