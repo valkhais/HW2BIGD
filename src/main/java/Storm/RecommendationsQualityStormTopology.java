@@ -61,13 +61,13 @@ public class RecommendationsQualityStormTopology {
         builder.setSpout(rating_spout, new RatingsSpout());
 
         System.out.println("setting up sum lift bolts");
-        builder.setBolt(sum_lift_recommend_bolt, new MaxSumLiftRecommendBolt()).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
-        builder.setBolt(sum_lift_Q_recommend_bolt, new QBolt(), 3).shuffleGrouping(sum_lift_recommend_bolt);
+        builder.setBolt(sum_lift_recommend_bolt, new MaxSumLiftRecommendBolt(), 8).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
+        builder.setBolt(sum_lift_Q_recommend_bolt, new QBolt(), 5).shuffleGrouping(sum_lift_recommend_bolt);
         builder.setBolt(sum_lift_Hdfs_bolt, hdfsbolt, 1).shuffleGrouping(sum_lift_Q_recommend_bolt);
 
         System.out.println("setting up avg lift bolts");
-        builder.setBolt(avg_lift_recommend_bolt, new MaxAvgLiftRecommendBolt()).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
-        builder.setBolt(avg_lift_Q_recommend_bolt, new QBolt(), 3).shuffleGrouping(avg_lift_recommend_bolt);
+        builder.setBolt(avg_lift_recommend_bolt, new MaxAvgLiftRecommendBolt(), 8).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
+        builder.setBolt(avg_lift_Q_recommend_bolt, new QBolt(), 5).shuffleGrouping(avg_lift_recommend_bolt);
         builder.setBolt(avg_lift_Hdfs_bolt, hdfsbolt, 1).shuffleGrouping(avg_lift_Q_recommend_bolt);
 
         Config conf = new Config();
