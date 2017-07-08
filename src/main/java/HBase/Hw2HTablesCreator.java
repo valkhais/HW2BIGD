@@ -73,7 +73,7 @@ public class Hw2HTablesCreator {
     }
 
     public Table getTable(TableName table_name) throws IOException {
-        return conn.getTable(lift_table_name);
+        return conn.getTable(table_name);
     }
 
     public void cleanup() throws IOException {
