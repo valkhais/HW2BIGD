@@ -31,7 +31,7 @@ public class MaxAvgLiftRecommendBolt extends AbstractRecommendBolt {
         }
         // calculate average lift for all movies in the lift arrays
         HashMap<String, Double> avg_lift_map = new HashMap<>();
-        for (String movie_id : avg_lift_map.keySet()) {
+        for (String movie_id : sum_lift_map.keySet()) {
             avg_lift_map.put(movie_id, sum_lift_map.get(movie_id) / num_of_lifts_map.get(movie_id));
         }
         // sort map by value in descending order using java 8+ api
