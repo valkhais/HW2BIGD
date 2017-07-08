@@ -128,6 +128,9 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
 
             lift_data.add(lift_array);
         }
+        System.out.println("got user window: " + user_w);
+        System.out.println("Calculated lift_data is: " + lift_data);
+
         return lift_data;
     }
 
