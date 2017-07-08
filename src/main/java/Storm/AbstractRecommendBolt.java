@@ -81,12 +81,12 @@ public abstract class AbstractRecommendBolt extends BaseRichBolt {
             System.out.println("current movie is " + movie_id);
             if (ranked_recommendations.contains(movie_id)) {
                 // indexes start from 0, ranks from 1
-                int rank = 1 + ranked_recommendations.indexOf(movie_id);
+                Integer rank = 1 + ranked_recommendations.indexOf(movie_id);
 
                 if (rating_sign.equals(POS))
-                    Q_diff = (double) (1 / rank);
+                    Q_diff = 1.0 / rank.doubleValue();
                 else
-                    Q_diff = -(double) (1 / rank);
+                    Q_diff = -(1.0 / rank.doubleValue());
             }
         }
 

@@ -14,8 +14,8 @@ public final class CommonConstants {
 
     public static final String USERS_TABLE_NAME = "users_table";
     public static final String USERS_TABLE_CF_WINDOW = "window";
-    public static final String USERS_TABLE_CF_WINDOW_COL_MAX_AGG = "max_agg";
-    public static final String USERS_TABLE_CF_WINDOW_COL_PROB_AGG = "prob_agg";
+    public static final String USERS_TABLE_CF_WINDOW_COL_MAX_SUM_AGG = "max_sum_agg";
+    public static final String USERS_TABLE_CF_WINDOW_COL_MAX_AVG_AGG = "max_avg_agg";
 
     public static final String USER_ID = "user_id";
     public static final String MOVIE_ID= "movie_id";

@@ -34,6 +34,6 @@ public class MaxSumLiftRecommendBolt extends AbstractRecommendBolt {
     }
 
     protected String getAggregationWindowColumnName() {
-        return USERS_TABLE_CF_WINDOW_COL_MAX_AGG;
+        return USERS_TABLE_CF_WINDOW_COL_MAX_SUM_AGG;
     }
 }

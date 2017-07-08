@@ -43,6 +43,6 @@ public class MaxAvgLiftRecommendBolt extends AbstractRecommendBolt {
     }
 
     protected String getAggregationWindowColumnName() {
-        return USERS_TABLE_CF_WINDOW_COL_PROB_AGG;
+        return USERS_TABLE_CF_WINDOW_COL_MAX_AVG_AGG;
     }
 }
