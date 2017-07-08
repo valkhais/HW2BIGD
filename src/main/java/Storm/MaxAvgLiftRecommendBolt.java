@@ -26,7 +26,7 @@ public class MaxAvgLiftRecommendBolt extends AbstractRecommendBolt {
                 Double curr_sum_lift = sum_lift_map.containsKey(movie_id) ? sum_lift_map.get(movie_id) : 0.0;
                 Double curr_num_of_lifts = num_of_lifts_map.containsKey(movie_id) ? num_of_lifts_map.get(movie_id) : 0.0;
                 sum_lift_map.put(movie_id, lift + curr_sum_lift);
-                num_of_lifts_map.put(movie_id, 1 + curr_num_of_lifts);
+                num_of_lifts_map.put(movie_id, 1.0 + curr_num_of_lifts);
             }
         }
         // calculate average lift for all movies in the lift arrays
