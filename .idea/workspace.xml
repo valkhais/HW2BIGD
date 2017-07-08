@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9550a12-a2c5-425b-a500-a2f205c98300" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java" afterPath="$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Storm/MaxAvgLiftRecommendBolt.java" afterPath="$PROJECT_DIR$/src/main/java/Storm/MaxAvgLiftRecommendBolt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Storm/MaxSumLiftRecommendBolt.java" afterPath="$PROJECT_DIR$/src/main/java/Storm/MaxSumLiftRecommendBolt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Utils/CommonConstants.java" afterPath="$PROJECT_DIR$/src/main/java/Utils/CommonConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" afterPath="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
     </list>
     <ignored path="hw2-dvir.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,24 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AbstractRecommendBolt.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractRecommendBolt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="1428">
               <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractRatingsBolt.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Dropbox/236620 - Big Data Technology/hw2_valyamisha - Copy/src/main/java/Storm/AbstractRatingsBolt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="92" column="24" selection-start-line="92" selection-start-column="24" selection-end-line="92" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -69,6 +55,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="36" column="52" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecommendationsQualityStormTopology.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -115,13 +111,13 @@
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/stormTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/QBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
         <option value="$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java" />
         <option value="$USER_HOME$/Dropbox/236620 - Big Data Technology/hw2_valyamisha - Copy/src/main/java/Storm/AbstractRatingsBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/CommonConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/MaxSumLiftRecommendBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/MaxAvgLiftRecommendBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
       </list>
     </option>
   </component>
@@ -855,12 +851,12 @@
       <workItem from="1499093602607" duration="15291000" />
       <workItem from="1499188870012" duration="16118000" />
       <workItem from="1499372895249" duration="48826000" />
-      <workItem from="1499508608791" duration="13916000" />
+      <workItem from="1499508608791" duration="14658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99579000" />
+    <option name="totallyTimeSpent" value="100321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -1116,14 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="79" column="37" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1187,11 +1175,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="1428">
           <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="69" column="53" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
