@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9550a12-a2c5-425b-a500-a2f205c98300" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/stormTest.java" afterPath="$PROJECT_DIR$/src/test/java/stormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/HBase/Hw2HTablesCreator.class" afterPath="$PROJECT_DIR$/target/classes/HBase/Hw2HTablesCreator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Storm/QBolt.class" afterPath="$PROJECT_DIR$/target/classes/Storm/QBolt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Storm/RecommendationsQualityStormTopology.class" afterPath="$PROJECT_DIR$/target/classes/Storm/RecommendationsQualityStormTopology.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/neglift.csv" afterPath="$PROJECT_DIR$/target/classes/neglift.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/poslift.csv" afterPath="$PROJECT_DIR$/target/classes/poslift.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java" afterPath="$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" afterPath="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stormTest.java" afterPath="$PROJECT_DIR$/src/test/java/stormTest.java" />
     </list>
     <ignored path="hw2-dvir.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,12 +27,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RecommendationsQualityStormTopology.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RecommendationsQualityStormTopology.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="53" column="50" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="50" />
+            <state relative-caret-position="867">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Recommender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Dropbox/236620 - Big Data Technology/hw2_royyoav/hw2sol/src/main/java/movies/Recommender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="78" column="44" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#4037#4038#0" expanded="false" />
+                <element signature="e#4087#4088#0" expanded="false" />
+                <element signature="e#4129#4130#0" expanded="false" />
+                <element signature="e#4174#4175#0" expanded="false" />
+                <element signature="e#4246#4247#0" expanded="false" />
+                <element signature="e#4342#4343#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,11 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stormTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stormTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stormTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="9" column="56" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hw2HTablesCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2465">
+              <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,10 +141,11 @@
         <option value="$PROJECT_DIR$/src/main/java/Storm/ProbRatingsBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/QBolt.java" />
         <option value="$PROJECT_DIR$/src/main/java/Storm/AbstractRecommendBolt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/stormTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java" />
       </list>
     </option>
   </component>
@@ -252,6 +279,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HW2BIGD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HW2BIGD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HBase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -756,16 +809,16 @@
       <workItem from="1499093602607" duration="15291000" />
       <workItem from="1499188870012" duration="16118000" />
       <workItem from="1499372895249" duration="48826000" />
-      <workItem from="1499508608791" duration="1457000" />
+      <workItem from="1499508608791" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87120000" />
+    <option name="totallyTimeSpent" value="89060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -780,7 +833,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24022005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24022005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -818,7 +871,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/storm/storm-core/0.10.0.2.4.0.0-169/storm-core-0.10.0.2.4.0.0-169.jar!/backtype/storm/topology/base/BaseRichSpout.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/io/FileReader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/poslift.csv">
       <provider selected="true" editor-type-id="text-editor">
@@ -895,6 +947,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="1005" column="65" selection-start-line="1005" selection-start-column="57" selection-end-line="1005" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -937,6 +990,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-358">
           <caret line="105" column="51" selection-start-line="105" selection-start-column="51" selection-end-line="105" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -960,16 +1016,6 @@
     <entry file="file://$PROJECT_DIR$/../hw2_royyoav/hw2sol/src/main/java/movies/QValueBolt.java" />
     <entry file="file://$PROJECT_DIR$/../hw2_royyoav/hw2sol/src/main/java/movies/Rating.java" />
     <entry file="file://$PROJECT_DIR$/../hw2_royyoav/hw2sol/src/main/java/movies/AggregationBolt.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../hw2_100/code/Final/hw2/src/test/java/BigData/hw2/AppTest.java" />
     <entry file="file://$PROJECT_DIR$/../hw2_royyoav/hw2sol/src/main/java/movies/HBaseManager.java" />
     <entry file="file://$PROJECT_DIR$/../hw2_royyoav/hw2sol/src/main/java/movies/RatingsSpout.java" />
@@ -983,14 +1029,6 @@
     <entry file="file://$PROJECT_DIR$/../hw2_100/result_A1" />
     <entry file="file://$PROJECT_DIR$/../hw2_100/code/Final/hw2/src/main/java/BigData/hw2/BatchCounterBolt.java" />
     <entry file="file://$PROJECT_DIR$/../hw2_100/code/Final/hw2/src/main/java/BigData/hw2/HW2Topology.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="53" column="50" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1009,11 +1047,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stormTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HBase/Hw2HTablesCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Dropbox/236620 - Big Data Technology/hw2_royyoav/hw2sol/src/main/java/movies/Recommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="78" column="44" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4037#4038#0" expanded="false" />
+            <element signature="e#4087#4088#0" expanded="false" />
+            <element signature="e#4129#4130#0" expanded="false" />
+            <element signature="e#4174#4175#0" expanded="false" />
+            <element signature="e#4246#4247#0" expanded="false" />
+            <element signature="e#4342#4343#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Storm/RecommendationsQualityStormTopology.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

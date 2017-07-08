@@ -56,14 +56,16 @@ public class RecommendationsQualityStormTopology {
                 .withRotationPolicy(rotationPolicy)
                 .withSyncPolicy(syncPolicy);
 
+        System.out.println("setting up spout");
         // first step of processing is the ratings spout reading records from ratings.dat in a streaming manner
         builder.setSpout(rating_spout, new RatingsSpout());
 
+        System.out.println("setting up sum lift bolts");
         builder.setBolt(sum_lift_recommend_bolt, new MaxSumLiftRecommendBolt(), 8).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
         builder.setBolt(sum_lift_Q_recommend_bolt, new QBolt(), 5).shuffleGrouping(sum_lift_recommend_bolt);
         builder.setBolt(sum_lift_Hdfs_bolt, hdfsbolt, 3).shuffleGrouping(sum_lift_Q_recommend_bolt);
 
-
+        System.out.println("setting up avg lift bolts");
         builder.setBolt(avg_lift_recommend_bolt, new MaxAvgLiftRecommendBolt(), 8).fieldsGrouping(rating_spout, new Fields(CommonConstants.USER_ID));
         builder.setBolt(avg_lift_Q_recommend_bolt, new QBolt(), 5).shuffleGrouping(avg_lift_recommend_bolt);
         builder.setBolt(avg_lift_Hdfs_bolt, hdfsbolt, 3).shuffleGrouping(avg_lift_Q_recommend_bolt);
@@ -72,10 +74,12 @@ public class RecommendationsQualityStormTopology {
         conf.setDebug(true);
 
         LocalCluster cluster = new LocalCluster();
+        System.out.println("submitting topology");
         cluster.submitTopology(recommendations_quality_topology, conf, builder.createTopology());
         // we will wait 10 minutes for the cluster to compute the submitted topology, before shutting it down
+        System.out.println("WAITING for the topology to execute");
         Utils.sleep(1000*60*10);
-
+        System.out.println("Shutting down cluster");
         cluster.shutdown();
         Hw2HTablesCreator.cleanup();
     }

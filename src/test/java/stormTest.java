@@ -7,7 +7,9 @@ public class stormTest {
     @Test
     public void test() {
         try {
+            System.out.println("calling create tables");
             Hw2HTablesCreator.createTables();
+            System.out.println("calling build topology");
             RecommendationsQualityStormTopology.buildTopology();
         } catch (Exception e) {
             e.printStackTrace();

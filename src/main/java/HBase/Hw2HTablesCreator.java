@@ -33,6 +33,7 @@ public class Hw2HTablesCreator {
 
     public static void createTables() throws IOException {
 
+        System.out.println("configure connection");
         // Instantiating configuration object
         Configuration conf = HBaseConfiguration.create();
         // Instantiating Connection object
@@ -40,19 +41,24 @@ public class Hw2HTablesCreator {
         // Instantiating Admin object
         admin = conn.getAdmin();
 
+        System.out.println("check if tables exist");
         // delete lift and users tables if already exist
         if (admin.tableExists(lift_table_name))
         {
+            System.out.println("delete existing lift table");
             admin.disableTable(lift_table_name);
             admin.deleteTable(lift_table_name);
         }
         if (admin.tableExists(users_table_name))
         {
+            System.out.println("delete existing users table");
             admin.disableTable(users_table_name);
             admin.deleteTable(users_table_name);
         }
         // create lift and users tables
+        System.out.println("calling create lift table");
         createLiftTable();
+        System.out.println("calling create users table");
         createUsersTable();
     }
 
@@ -61,6 +67,7 @@ public class Hw2HTablesCreator {
     }
 
     public static void cleanup() throws IOException {
+        System.out.println("tables creator cleanup");
         admin.close();
         conn.close();
     }
@@ -73,21 +80,26 @@ public class Hw2HTablesCreator {
         Iterable<CSVRecord> pos_records = CSVFormat.DEFAULT.parse(in_pos);
         Iterable<CSVRecord> neg_records = CSVFormat.DEFAULT.parse(in_neg);
 
+        System.out.println("creating map pos/neg lift");
         // create a map (x, pos/neg) -> [(y1, pos/neg lift), ..., (yk, pos/neg lift)]
         HashMap<JSONObject,JSONObject> liftMap = new HashMap<>();
         updateLiftMapFromCSV(liftMap, pos_records, POS);
         updateLiftMapFromCSV(liftMap, neg_records, NEG);
+        System.out.println("mapped pos/neg lift");
 
+        System.out.println("creating lift table");
         // create the lift table resource with column family - lift
         HTableDescriptor tableDescriptor = new HTableDescriptor(lift_table_name);
         tableDescriptor.addFamily(new HColumnDescriptor(LIFT_TABLE_CF_LIFT));
         admin.createTable(tableDescriptor);
+        System.out.println("created lift table");
 
         Table table = conn.getTable(lift_table_name);
 
         // add lift data to the table
         List<Put> put_list = new ArrayList<>();
 
+        System.out.println("populating lift table");
         for (Map.Entry<JSONObject, JSONObject> entry : liftMap.entrySet()) {
             // create a Put object with row key - (x, pos/neg)
             Put put = new Put(Bytes.toBytes(entry.getKey().toString()));
@@ -96,6 +108,7 @@ public class Hw2HTablesCreator {
 //            table.put(put);
         }
         table.put(put_list);
+        System.out.println("populated lift table");
 
         table.close();
     }
@@ -125,10 +138,12 @@ public class Hw2HTablesCreator {
     }
 
     private static void createUsersTable() throws IOException {
+        System.out.println("creating users table");
         // create the users table resource with column family - window
         HTableDescriptor tableDescriptor = new HTableDescriptor(users_table_name);
         tableDescriptor.addFamily(new HColumnDescriptor(USERS_TABLE_CF_WINDOW));
         admin.createTable(tableDescriptor);
+        System.out.println("created users table");
     }
 
 }
